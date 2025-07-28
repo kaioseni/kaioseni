@@ -3,7 +3,7 @@
 
 - 💻 Full-Stack Developer
 - 👨‍🎓 Graduado em ADS pelo IFSP 
-- 👨‍🎓 Pós-Graduando em Desenvolvimento de sistemas para inster e dispositivos móveis pelo IFSP 
+- 👨‍🎓 Pós-Graduando em Desenvolvimento de sistemas para internet e dispositivos móveis pelo IFSP 
 
 <div> 
   <a href="https://github.com/kaioseni">
