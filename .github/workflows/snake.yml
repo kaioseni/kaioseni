@@ -1,31 +1,21 @@
-name: Generate Snake Animation 🐍
+name: Test Snake Generation
 
 on:
-  schedule:
-    - cron: "0 */12 * * *"  # Executa a cada 12 horas
   workflow_dispatch:
 
 jobs:
-  generate:
+  test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Generate Snake SVG
+      - name: Generate Snake
         uses: Platane/snk@v3
         with:
           github_user_name: kaioseni
           outputs: |
-            ./github-contribution-grid-snake.svg  # <-- Gera na raiz
+            ./github-contribution-grid-snake.svg
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: .   # <-- Está na raiz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: List output files
+        run: ls -la
