@@ -1,32 +1,34 @@
 name: Generate snake animation
 
-on: 
+on:
   schedule:
-    - cron: "0 */12 * * *"  # Executa a cada 12 horas, no minuto 0
-  
+    - cron: "0 */12 * * *"  # Executa a cada 12 horas
   workflow_dispatch:
-  
   push:
     branches:
-    - master
+      - master
 
 jobs:
-  generate: 
+  generate:
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-  
+
     steps:
-      - name: generate snake.svg
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate snake.svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: kaioseni
-          palette: github-dark  # Ajuste no parâmetro de palette
-  
-      - name: push snake.svg to the output branch
+          outputs: dist/github-contribution-grid-snake.svg
+          palette: github-dark
+
+      - name: Push snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
-          # Não é necessário o token aqui, o GitHub fornece automaticamente o GITHUB_TOKEN
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
