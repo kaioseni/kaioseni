@@ -22,10 +22,10 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: kaioseni
-          outputs: dist/github-contribution-grid-snake.svg
+          outputs: dist/github-contribution-grid-snake.svg  # <- ESSA LINHA É ESSENCIAL
           palette: github-dark
 
-      - name: Push snake.svg to the output branch
+      - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
