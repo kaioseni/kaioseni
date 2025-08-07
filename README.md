@@ -25,4 +25,7 @@
   <img align="center" alt="Kotlin" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg">
 </div>
 
-![Snake animation](https://github.com/kaioseni/kaioseni/blob/output/github-contribution-grid-snake-dark.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaioseni/kaioseni/output/github-contribution-grid-snake-dark.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/kaioseni/kaioseni/output/github-contribution-grid-snake.svg">
+</picture>
