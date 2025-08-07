@@ -25,4 +25,4 @@
   <img align="center" alt="Kotlin" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg">
 </div>
 
-![Snake animation](https://github.com/kaioseni/kaioseni/blob/output/github-contribution-grid-snake-dark.svg)
+![Snake animation](https://github.com/kaioseni/kaioseni/blob/output/github-contribution-grid-snake.svg)
